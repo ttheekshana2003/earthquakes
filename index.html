@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Latest Earthquakes</title>
-  <!-- Link your CSS file here -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Latest Earthquakes</h1>
-  </header>
-  
-  <main>
-    <!-- Display earthquake data here -->
-    <div id="earthquakeData"></div>
-  </main>
-
-  <!-- Include your JavaScript file -->
-  <script src="script.js"></script>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Earthquakes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Latest Earthquakes</h1>
+    </header>
+    
+    <main>
+      <div id="loadingMessage" class="loading-message">Loading...</div>
+      <div id="earthquakeData" class="earthquake-container"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

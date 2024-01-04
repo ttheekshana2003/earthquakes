@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Basic styling for earthquake data */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .loading-message {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    display: none; 
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .earthquake-container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .earthquake-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .earthquake-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .earthquake-item p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .earthquake-item a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

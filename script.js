@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const earthquakeDataElement = document.getElementById("earthquakeData");
-    const apiUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&starttime=2023-01-04&endtime=2023-01-05&minmagnitude=5";
+    const loadingElement = document.getElementById("loadingMessage");
+    //const currentTimeUTC = new Date().toISOString();
+    loadingElement.style.display = "block";
+  
+  const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().split('.')[0];
+
+  const apiUrl = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&updatedafter=${twentyFourHoursAgo}&minmagnitude=5`;
   
     fetch(apiUrl)
       .then(response => {
@@ -10,12 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then(data => {
-        // Handle the earthquake data here and display it on the page
+        loadingElement.style.display = "none";
         const earthquakes = data.features;
         earthquakes.forEach(earthquake => {
           const { mag, place, time, url } = earthquake.properties;
           const earthquakeInfo = `
-            <div>
+            <div class="earthquake-item">
               <h3>${place}</h3>
               <p>Magnitude: ${mag}</p>
               <p>Time: ${new Date(time).toLocaleString()}</p>
