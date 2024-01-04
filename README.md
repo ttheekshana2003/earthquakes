@@ -6,7 +6,7 @@ This repository contains code for a static website that fetches and displays the
 
 Download
 ```
-https://github.com/ttheekshana2003/weatherapi.com-API-Python-.git
+https://github.com/ttheekshana2003/ttheekshana2003/earthquakes.git
 ```
 ## Features
 
